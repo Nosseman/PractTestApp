@@ -1,0 +1,100 @@
+﻿<!-- Juuso Nousiainen, 1751514 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">-->
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css">
+
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/databaseHandler.js"></script>
+    <script type="text/javascript" src="js/userHandler.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <!-- Include the jQuery Mobile library -->
+    <!--<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+
+    <title>Login</title>
+</head>
+
+<body class="cover vertical-align-center indigo-800 align-center blend-soft-light">
+    <!-- Register menu-->
+    <div class="menu cover blend-soft-light align-center indigo-800 padding" id="registerMenu">
+        <div class="cover align-center">
+            <div class="space"></div>
+            <h1 class="align-center titleAwesomeMenu center">Register</h1>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <h2 class="text-white titleAwesomeMenu align-center">Want to be a part of the </h2>
+            <h2 class="text-white titleAwesomeMenu align-center">PractTest App Community?</h2>
+            <h2 class="text-white titleAwesomeMenu align-center">First you need to create an user account.</h2>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="list">
+                <div class="item blue-300 border-blue-500 border-bottom">
+                    <input class="titleAwesomeMenu" type="text" placeholder="Username" id="txtUsername" />
+                </div>
+                <div class="item blue-300">
+                    <input class="titleAwesomeMenu" type="password" placeholder="Password" id="txtPassword" />
+                </div>
+            </div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <button class="blue-700 border-white text-white radius full titleAwesomeMenu" onclick="addUser()">Register</button>
+        </div>
+    </div>
+
+    <!-- What the user sees when the app opens -->
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+
+    <h1 class="text-white titleAwesomeMenu">PractTest App</h1>
+    <p class="titleAwesome">Please Login or Register</p>
+    <div id="deviceready" class="blink"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+
+    <div class="row"></div>
+    <div class="col-90 col-center">
+        <div class="list no-border">
+
+            <div class="item border-indigo-900 border-bottom padding">
+                <input class="placeholder-white text-white titleAwesomeMenu" type="text" placeholder="Enter your username" id="loginUsername" />
+            </div>
+
+            <div class="item border-indigo-900 border-bottom padding">
+                <input class="placeholder-white text-white titleAwesomeMenu" type="password" placeholder="Enter your password" id="loginPassword" />
+            </div>
+
+        </div>
+        <div class="space"></div>
+        <div class="space"></div>
+        <!--Login button with a loading animation-->
+        <button class="light-blue-900 border-white text-white radius full titleAwesome" id="loginBut" onclick="loadingElement('loginBut'); login()">Login</button>
+
+        <!-- Register-menu opens from a text-->
+        <p class="titleAwesome">
+            Not a registered user yet?
+            <a class="text-black titleAwesome" onclick="openMenu('registerMenu')">Register!</a>
+        </p>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="mobileui/mobileui.js"></script>
+
+</body>
+</html>

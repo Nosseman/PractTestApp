@@ -1,0 +1,117 @@
+﻿<!--Juuso Nousiainen, 1751514-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">-->
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css">
+
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/databaseHandler.js"></script>
+    <script type="text/javascript" src="js/userHandler.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <!-- Include the jQuery Mobile library -->
+    <!--<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+    <title>PractTest App HomePage</title>
+
+</head>
+
+<body class="cover vertical-align-center align-center blend-soft-light">
+    <div class="page cyan-100">
+        <!--Menu-->
+        <div class="menu indigo-800" id="menu">
+            <div class="space"></div>
+            <div class="space"></div>
+            <!--if the home path is chosen on page1 we just open the tab1 and close the menu-->
+            <button class="text-white text-strong titleAwesomeMenu full" onclick="openTab('tabHome'); closeMenu('menu')">Home</button>
+            <button class="text-white text-strong titleAwesomeMenu full" onclick="openPage('page2')">Studies</button>
+            <button class="text-white text-strong titleAwesomeMenu full" onclick="openPage('contact')">My Contacts</button>
+            <button class="text-white text-strong titleAwesomeMenu full" onclick="logout()">Logout</button>
+        </div>
+
+        <!--Header-->
+        <div class="header indigo-800">
+            <button class="left icon ion-navicon" onclick="openMenu('menu')"></button>
+            <h1 class="titleAwesomeMenu">PractTest App</h1>
+        </div>
+
+        <!--Tab navigation on the footer-->
+        <div class="footer indigo-800 tab">
+            <button class="icon ion-android-home titleAwesome" onclick="openTab('tabHome')">Home</button>
+            <button class="icon ion-information-circled titleAwesome" onclick="openTab('tabAbout')">About</button>
+            <button class="icon ion-pin titleAwesome" onclick="openTab('tabLocation')">Location</button>
+        </div>
+
+        <!--Tab Home-->
+        <div class="tab-content active" id="tabHome">
+            <h2 class="text-strong titleAwesome has-header padding text-black align-center">Home</h2>
+            <p class="text-black titleAwesome align-center padding">
+                Welcome to <b>PractTest App!</b>
+            </p>
+            <div class="space"></div>
+            <p class="text-black titleAwesome align-center padding">
+                This app serves as my final practical test app for the Laurea UAS study unit <b>
+                Building and Deploying Cross Platform Mobile Apps.</b> On this study unit we had hands-on 
+                studies how to build and deploy mobile apps targeting Android and iOS mobile devices.
+                The apps are developed using the combination of <b>HTML, CSS</b> and <b>JavaScript.</b>
+            </p>
+            <p class="text-black titleAwesome align-center padding">
+                On these tabs you can find some information about this app and about me. On the third tab you can check your geolocation.
+                From the menu you find pages about my studies and of course the contact page.
+            </p>
+                <div class="space"></div>
+            <p class="text-black titleAwesome align-center padding">
+                Technologies used in this app include: <br /><b>
+                NodeJS, Java JDK, Apache Ant, Apache Cordova, Ionic, Android SDK.</b>
+            </p>
+        </div>
+
+        <!--Tab About-->
+        <div class="tab-content" id="tabAbout">
+            <h2 class="text-strong has-header padding text-black titleAwesome align-center">About Me</h2>
+            <p class="text-black titleAwesome align-center">
+                Hello there and thank you for using the PractTest App!
+            </p>
+            <div class="space"></div>
+            <div class="space"></div>
+            <p class="text-black titleAwesome align-center">
+                I am <b>Juuso Nousiainen</b>, the developer of this app! <br />
+                I am a Business Information Technology student at Laurea University of Applied Sciences. In my complementary
+                competence studies I have weighted in <b>UI design, software design and development, mobile application development 
+                and programming.
+                </b>
+            </p>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <p class="text-black titleAwesome align-center">
+                Even though I am a second year student I already have all the needed credits from study units and only have
+                internship and thesis left. So if you are looking for an intern ready to be your next future talent, look no further
+                as you already found <b>me!</b>
+            </p>
+        </div>
+
+        <!--Tab Location-->
+        <div class="tab-content" id="tabLocation">
+            <h2 class="text-strong has-header padding text-black titleAwesome align-center">Do you wanna know where you are?</h2>
+            <button onclick="getLocation()" class="indigo-600 radius">Click Here</button>
+            <div class="mapContainer" id="map"></div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="mobileui/mobileui.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+﻿<!--Juuso Nousiainen, 1751514-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">-->
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css">
+
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/databaseHandler.js"></script>
+    <script type="text/javascript" src="js/userHandler.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <!-- Include the jQuery Mobile library -->
+    <!--<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+    <title>Studies</title>
+</head>
+
+<body class="cover vertical-align-center align-center blend-soft-light">
+    <div class="page cyan-100">
+        <!--Header-->
+        <div class="header indigo-800">
+            <button class="left icon ion-android-arrow-back" onclick="backPage()"></button>
+            <h1 class="titleAwesomeMenu">Studies</h1>
+        </div>
+
+        <!--Content-->
+        <div class="cover padding align-center has-header" style="background-image:url(/www/img/sky.png)">
+            <div class="space"></div>
+            <img class="avatar circle border-white shadow" src="img/profile.jpg">
+            <h1 class="text-black titleAwesomeMenu align-center padding">Juuso Nousiainen</h1>
+            <div class="space"></div>
+            <div class="buttons-group full">
+                <!--Buttons for tabs on this page-->
+                <button class="indigo-800 border-white text-white radius-left titleAwesomeMenu" onclick="openTab('tabDone')">Done</button>
+                <button class="indigo-800 border-white text-white titleAwesomeMenu" onclick="openTab('tabFuture')">Future</button>
+                <button class="indigo-800 border-white text-white radius-right titleAwesomeMenu" onclick="openTab('tabProgress')">Progress</button>
+            </div>
+        </div>
+
+
+        <!--Tab-->
+        <div class="tab-content active" id="tabDone">
+            <p class="text-black titleAwesome padding align-center">My software developing studies so far:</p>
+            <div class="list">
+
+                <div class="item">
+                    <section class="container">
+                        <div class="card" onclick="flip()">
+                            <div class="front indigo-600 padding radius">
+                                <h2 class=" text-white titleAwesome align-center">Basics of Programming</h2>
+                                <p class="text-white titleAwesomeSmall align-center">with Java</p>
+                            </div>
+                            <div class="back teal-300 padding radius">
+                                <h2 class="text-black titleAwesome align-center">5 credits</h2>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="item">
+                    <section class="container">
+                        <div class="card2" onclick="flip2()">
+                            <div class="front indigo-600 padding radius">
+                                <h2 class=" text-white titleAwesome align-center">Object Oriented Programming</h2>
+                                <p class="text-white titleAwesomeSmall align-center">with Java</p>
+                            </div>
+                            <div class="back teal-300 padding radius">
+                                <h2 class="text-black titleAwesome align-center">5 credits</h2>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="item">
+                    <section class="container">
+                        <div class="card3" onclick="flip3()">
+                            <div class="front indigo-600 padding radius">
+                                <h2 class=" text-white titleAwesome align-center">Basics of Programming</h2>
+                                <p class="text-white titleAwesomeSmall align-center">with Python</p>
+                            </div>
+                            <div class="back teal-300 padding radius">
+                                <h2 class="text-black titleAwesome align-center">3 credits</h2>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="item">
+                    <section class="container">
+                        <div class="card4" onclick="flip4()">
+                            <div class="front indigo-600 padding radius">
+                                <h2 class=" text-white titleAwesome align-center">Basics of Programming</h2>
+                                <p class="text-white titleAwesomeSmall align-center">with PHP</p>
+                            </div>
+                            <div class="back teal-300 padding radius">
+                                <h2 class="text-black titleAwesome align-center">3 credits</h2>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="item">
+                    <section class="container">
+                        <div class="card5" onclick="flip5()">
+                            <div class="front indigo-600 padding radius">
+                                <h2 class=" text-white titleAwesome align-center">Introduction to Mobile App Development</h2>
+                                <p class="text-white titleAwesomeSmall align-center">with Ionic4 & Angular</p>
+                            </div>
+                            <div class="back teal-300 padding radius">
+                                <h2 class="text-black titleAwesome align-center">5 credits</h2>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="item">
+                    <section class="container">
+                        <div class="card6" onclick="flip6()">
+                            <div class="front indigo-600 padding radius">
+                                <h2 class=" text-white titleAwesome align-center">Building and Deploying Cross Platform Mobile Apps</h2>
+                            </div>
+                            <div class="back teal-300 padding radius">
+                                <h2 class="text-black titleAwesome align-center">5 credits</h2>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="item">
+                    <section class="container">
+                        <div class="card7" onclick="flip7()">
+                            <div class="front indigo-600 padding radius">
+                                <h2 class=" text-white titleAwesome align-center">Basics of UI/UX design</h2>
+                            </div>
+                            <div class="back teal-300 padding radius">
+                                <h2 class="text-black titleAwesome align-center">5 credits</h2>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="item">
+                    <section class="container">
+                        <div class="card8" onclick="flip8()">
+                            <div class="front indigo-600 padding radius">
+                                <h2 class=" text-white titleAwesome align-center">User centric design of Digital Services</h2>
+                            </div>
+                            <div class="back teal-300 padding radius">
+                                <h2 class="text-black titleAwesome align-center">5 credits</h2>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="item">
+                    <section class="container">
+                        <div class="card9" onclick="flip9()">
+                            <div class="front indigo-600 padding radius">
+                                <h2 class=" text-white titleAwesome align-center">UI/UX modelling</h2>
+                            </div>
+                            <div class="back teal-300 padding radius">
+                                <h2 class="text-black titleAwesome align-center">5 credits</h2>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="item">
+                    <section class="container">
+                        <div class="card10" onclick="flip10()">
+                            <div class="front indigo-600 padding radius">
+                                <h2 class=" text-white titleAwesome align-center">Basics of Software testing</h2>
+                                <p class="text-white titleAwesomeSmall align-center">material for ISTQB sertificate</p>
+                            </div>
+                            <div class="back teal-300 padding radius">
+                                <h2 class="text-black titleAwesome align-center">5 credits</h2>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="item">
+                    <section class="container">
+                        <div class="card11" onclick="flip11()">
+                            <div class="front indigo-600 padding radius">
+                                <h2 class=" text-white titleAwesome align-center">Software testing</h2>
+                            </div>
+                            <div class="back teal-300 padding radius">
+                                <h2 class="text-black titleAwesome align-center">5 credits</h2>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+
+            </div>
+            </div>
+
+        <!--Tab-->
+        <div class="tab-content" id="tabFuture">
+            <p class="text-black titleAwesome padding align-center">My future studies:</p>
+            <div class="list">
+                <div class="item">
+                    <section class="container">
+                        <div class="card12" onclick="flip12()">
+                            <div class="front indigo-600 padding radius">
+                                <h2 class=" text-white titleAwesome align-center">Android App Development</h2>
+                                <p class="text-white titleAwesomeSmall align-center">with Kotlin</p>
+                            </div>
+                            <div class="back teal-300 padding radius">
+                                <h2 class="text-black titleAwesome align-center">5 credits</h2>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="item">
+                    <section class="container">
+                        <div class="card13" onclick="flip13()">
+                            <div class="front indigo-600 padding radius">
+                                <h2 class=" text-white titleAwesome align-center">Programming of Web Software</h2>
+                                <p class="text-white titleAwesomeSmall align-center">with Java</p>
+                            </div>
+                            <div class="back teal-300 padding radius">
+                                <h2 class="text-black titleAwesome align-center">5 credits</h2>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!--Tab-->
+        <div class="tab-content" id="tabProgress">
+            <button class="margin indigo-800 border-white text-white titleAwesomeMenu radius" onclick="showProgressCr()">Tap to see my study progress</button>
+            <div id="progressMyCredits"></div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="mobileui/mobileui.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+</body>
+</html>
